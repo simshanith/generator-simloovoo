@@ -1,0 +1,10 @@
+### https://raw.github.com/github/gitignore/master/yeoman.gitignore
+
+node_modules/
+bower_components/
+*.log
+
+build/
+dist/
+
+
