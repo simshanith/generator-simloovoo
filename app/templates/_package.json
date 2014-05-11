@@ -1,5 +1,30 @@
 {
   "name": "package",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-stylus": "~0.1.0",
+    "csso-stylus": "0.0.3",
+    "grunt": "~0.4.2",
+    "grunt-concurrent": "~0.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jade": "~0.10.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-stylus": "^0.14.0",
+    "grunt-contrib-symlink": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-diff-copy": "~0.1.0",
+    "grunt-localtunnel-me": "0.0.1",
+    "load-grunt-config": "~0.7.2",
+    "load-grunt-tasks": "~0.3.0",
+    "localtunnel": "^1.2.0",
+    "lodash": "~2.4.1",
+    "marked": "~0.3.1",
+    "open": "0.0.5",
+    "time-grunt": "~0.2.9",
+    "underscore.string": "~2.3.3"
+  }
 }

@@ -40,21 +40,16 @@ var SimloovooGenerator = yeoman.generators.Base.extend({
   },
   */
 
-  scaffoldGruntDirectory: function() {
+  scaffoldGruntSetup: function() {
     this.directory('grunt/', 'grunt/');
-
+    this.copy('Gruntfile.js', 'Gruntfile.js');
   },
 
-  scaffoldSourceDirectory: function() {
+  scaffoldSourceSetup: function() {
     this.directory('src/', 'src/');
   },
 
-
-
   app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
-
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
   },
