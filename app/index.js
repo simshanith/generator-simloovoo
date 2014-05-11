@@ -15,7 +15,7 @@ var SimloovooGenerator = yeoman.generators.Base.extend({
       }
     });
   },
-
+  /* included with yeoman generator
   askFor: function () {
     var done = this.async();
 
@@ -38,6 +38,18 @@ var SimloovooGenerator = yeoman.generators.Base.extend({
       done();
     }.bind(this));
   },
+  */
+
+  scaffoldGruntDirectory: function() {
+    this.directory('grunt/', 'grunt/');
+
+  },
+
+  scaffoldSourceDirectory: function() {
+    this.directory('src/', 'src/');
+  },
+
+
 
   app: function () {
     this.mkdir('app');
