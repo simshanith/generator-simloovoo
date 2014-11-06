@@ -18,10 +18,6 @@ module.exports = function(grunt) {
               process.env.PORT    ||
               8000;
 
-  var liveReloadPort  = grunt.option('livereload-port') ||
-                        process.env.LIVERELOAD_PORT     ||
-                        35729;
-
   var build = grunt.option('dev') && 'dev' ||
               grunt.option('build') ||
               'prod';
@@ -38,22 +34,24 @@ module.exports = function(grunt) {
       build: build,
       path: path,
       env: process.env,
-      port: port,
-      liveReloadPort: liveReloadPort
+      port: port
     },
     // grunt.initConfig
     init: true,
-    // https://github.com/sindresorhus/load-grunt-tasks
-    loadGruntTasks: true
+    // https://github.com/shootaroo/jit-grunt
+    jitGrunt: {
+      staticMappings: {
+        diffCopy: 'grunt-diff-copy'
+      },
+      // custom tasks can be defined here.
+      loadTasks: 'grunt/tasks'
+    }
   });
-
-  // custom tasks can be defined here.
-  grunt.loadTasks('grunt/tasks');
 
   // default behavior.
   grunt.registerTask('default', 'Grunt.', function() {
     grunt.log.ok(grunt.config('pkg.name'));
-    grunt.task.run(['symlink', 'main', 'serve']);
+    grunt.task.run(['setup', 'main', 'serve']);
   });
 
 };

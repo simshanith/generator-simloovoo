@@ -2,6 +2,6 @@
 
 module.exports = function(grunt) {
     grunt.registerTask('main', 'Perform main build tasks.', function(){
-      //grunt.task.run([]);
+      grunt.task.run(['concurrent:main', 'clean:build']);
     });
 };
